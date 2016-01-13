@@ -1,0 +1,23 @@
+HMAC: 
+    type: class
+    constructor:
+        type: function
+        returns: HMAC
+        args:
+            self:
+                type: HMAC
+                required: true
+            key:
+                type: string
+                required: true
+            msg:
+                type: string
+                default: None
+                required: false
+            digestmod:
+                type: hashlib constructor
+                default: None
+                required: false
+    children: 
+        digest_size:
+            type: int

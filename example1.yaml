@@ -1,0 +1,28 @@
+HMAC: { 
+    type: class,
+    children: { 
+        __init__: { 
+            type: function, 
+            args: {
+                self: { 
+                    type: HMAC, 
+                    required: true }, 
+                key: { 
+                    type: string,
+                    required: true },
+                msg: {
+                    type: string,
+                    default: None,
+                    required: false },
+                digestmod: {
+                    type: hashlib obj, 
+                    default: None,
+                    required: false }},
+            returns: HMAC },
+        digest_size: { 
+            type: int }
+        
+        }
+    
+    }
+
